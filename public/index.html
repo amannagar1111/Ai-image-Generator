@@ -1,0 +1,74 @@
+
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>AI Image Generator</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/spinner.css">
+
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <script src="/public/js/main.js" ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="/2.png">
+        </div>
+        
+          
+        
+        <nav>
+          <ul>
+            <li><a target="_blank" href="">SOURCE</a></li>
+            <li><a target="_blank" href="https://platform.openai.com/docs/guides/images">api</a></li>
+            <li><a target="_blank" href="https://github.com/amannagar1111">github</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/amannagar241/">linkedin</a></li>
+            <li><a target="_blank" href="https://platform.openai.com/docs/api-reference/introduction">ABOUT</a></li>
+          </ul>
+        </nav>
+      </nav>
+    </header>
+    <div id="heading">
+      <h1>TEXT TO IMAGE GENERATOR</h1>
+      <!-- <p>Describe whats in your mind to generate a image</p> -->
+    </div>
+    
+    <main>
+      <section class="showcase">
+        <form id="image-form">
+          <input id="prompt" placeholder="Describe whats in your mind ..." class="input" name="firstName" type="text">
+
+          <div class="form-control">
+            <select name="size" id="size" selected>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+            <!-- <select name="number" id="count">
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select> -->
+          </div>
+          <button type= "submit" id="submit" class="button">
+            <span class="button_lg">
+                <span class="button_sl"></span>
+                <span type= "submit" class="button_text">Generate</span>
+            </span>
+            </button>
+          </form>
+        
+      </section>
+
+      <section class="image">
+        <div class="image-container">
+          <h2 class="msg"></h2>
+          <img src="" alt="" id="image" />
+        </div>
+      </section>
+    </main>
+
+    <div class="spinner"></div>
+  </body>
+</html>
+
