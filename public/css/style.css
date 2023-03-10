@@ -172,10 +172,11 @@ h1 {
 
 .input {
   width:40rem;
+  display: flex;
+  margin-right:5cm;
   height: 50px;
   padding: 10px;
   font-family: 'Bebas Neue', cursive;
-  outline: none;
   background: #e8e8e8;
   box-shadow: 5px 5px 17px #c8c8c8,
              -5px -5px 17px #ffffff;
