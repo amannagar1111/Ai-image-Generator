@@ -4,7 +4,7 @@ function onSubmit(e) {
   document.querySelector('.msg').textContent = '';
   document.querySelector('#image').src = '';
 
-  const prompt = document.querySelector('#prompt').value;
+  const prompt = document.querySelector('#prompt').value;  // Get prompt from input field
   const size = document.querySelector('#size').value;
 
   if (prompt === '') {
@@ -32,13 +32,11 @@ async function generateImageRequest(prompt, size) {
 
     if (!response.ok) {
       removeSpinner();
-      throw new Error('That Image cannot be generated! :( ');
+      throw new Error('That image could not be generated');
     }
 
     const data = await response.json();
-    // console.log(data);
-
-    const imageUrl = data.data;
+    const imageUrl = data.data[0].url; // Get the image URL from the response
 
     document.querySelector('#image').src = imageUrl;
 
@@ -49,17 +47,13 @@ async function generateImageRequest(prompt, size) {
 }
 
 function showSpinner() {
-  const spinner = document.querySelector('.spinner');
-  spinner.classList.add('show');
+  document.querySelector('.spinner').classList.add('show');
 }
+
 function removeSpinner() {
-  const spinner = document.querySelector('.spinner');
-  spinner.classList.remove('show');
+  document.querySelector('.spinner').classList.remove('show');
 }
 
-
-document.addEventListener('DOMContentLoaded', function()
- {
+document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#image-form').addEventListener('submit', onSubmit);
 });
-

@@ -29,13 +29,13 @@ const generateImage = async (req,res) =>  {
 
     const imageSize = size == 'Small' ? "256x256": size === 'medium' ? '512x512': '1024x1024 ';
 
-    // const count = number == 'One' ? '1': number ==='Two' ? '2': '3';
+
 
     try{
     const response = await openai. createImage({
         prompt,
-        n:Number,
-        size: imageSize
+        n:1,
+        size: '512x512'
     });
 
 
