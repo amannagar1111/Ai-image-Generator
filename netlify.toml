@@ -2,9 +2,12 @@
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> caf2acb12465d21803cdca6281a05b62f7d4e436
 [[redirects]]
   from = "/*"
   to = "public/index.html"
