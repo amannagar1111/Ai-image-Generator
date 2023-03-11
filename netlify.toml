@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-
-
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> caf2acb12465d21803cdca6281a05b62f7d4e436
-=======
->>>>>>> 3bb20496dc0d947d56ef2440ba717eb2f48749ad
 [[redirects]]
   from = "/*"
   to = "public/index.html"
